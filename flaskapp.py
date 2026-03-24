@@ -45,7 +45,7 @@ def analyze(word):
 
     reversed_word = ''  # replace this with your reverse logic
     for i in range(num_chars):
-        reversed_word += word[num_chars-i+1]
+        reversed_word += word[num_chars-i-1]
 
 
     return render_template('analyze.html',
