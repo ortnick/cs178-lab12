@@ -43,11 +43,16 @@ def analyze(word):
         if word[i].lower() in ("a", "e", "i", "o", "u"):
             num_vowels += 1
 
-    # render_template passes all variables into analyze.html
+    reversed_word = ''  # replace this with your reverse logic
+    for i in range(num_chars):
+        reversed_word += word[num_chars-i]
+
+
     return render_template('analyze.html',
                            word=word,
                            num_chars=num_chars,
-                           num_vowels=num_vowels)
+                           num_vowels=num_vowels,
+                           reversed_word=reversed_word)
 
 
 # ============================================================
